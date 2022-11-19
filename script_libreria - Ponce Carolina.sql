@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS delete_vendedores (
 );
 
 CREATE TABLE IF NOT EXISTS historico_precios (
-	id_histórico_precios INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+	id_historico_precio INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
     id_producto INT NOT NULL,
     nombre_producto  VARCHAR(64) NOT NULL,
     autor_producto VARCHAR(32) NOT NULL,
