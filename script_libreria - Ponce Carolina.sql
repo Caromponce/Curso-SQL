@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS libreria;
+CREATE DATABASE IF NOT EXISTS libreria_ponce;
 
-USE libreria;
+USE libreria_ponce;
 
 CREATE TABLE IF NOT EXISTS personas (
 	id_persona INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
@@ -71,3 +71,26 @@ CREATE TABLE IF NOT EXISTS producto_venta (
     FOREIGN KEY(id_producto) REFERENCES productos(id_producto)
 );
 
+CREATE TABLE IF NOT EXISTS delete_vendedores (
+	id_delete_vendedor INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    id_persona INT NOT NULL,
+    nombre_persona  VARCHAR(32) NOT NULL,
+    apellido_persona  VARCHAR(32) NOT NULL,
+	nombre_user VARCHAR(32) NOT NULL,
+    fecha DATE,
+    hora TIME,
+    FOREIGN KEY(id_persona) REFERENCES personas(id_persona)
+);
+
+CREATE TABLE IF NOT EXISTS historico_precios (
+	id_histórico_precios INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    id_producto INT NOT NULL,
+    nombre_producto  VARCHAR(64) NOT NULL,
+    autor_producto VARCHAR(32) NOT NULL,
+    precio_anterior DECIMAL (7, 2) NOT NULL,
+	precio_nuevo DECIMAL (7, 2) NOT NULL,
+	nombre_user VARCHAR(32) NOT NULL,
+    fecha DATE,
+    hora TIME,
+    FOREIGN KEY(id_producto) REFERENCES productos(id_producto)
+);

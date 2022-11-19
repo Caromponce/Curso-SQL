@@ -1,4 +1,4 @@
-USE libreria;
+USE libreria_ponce;
 
 -- Vista que muestra los nombres de los 5 productos más vendidos. 
 CREATE OR REPLACE VIEW productos_mas_vendidos AS 

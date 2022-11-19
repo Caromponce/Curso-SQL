@@ -1,21 +1,36 @@
-USE libreria;
+USE libreria_ponce;
 
 INSERT INTO personas (id_persona, nombre, apellido, dni, email, fecha_nacimiento) VALUES
-(NULL, "Hubert", "Gubbins", 47393713, "hgubbins0@bravesites.com", "2001-09-30"),
-(NULL, "Bpersonasabs", "Schapero", 48537601, "bschapero1@shutterfly.com", "2006-05-31"),
-(NULL, "Gallagher", "Brasier", 39506702, "gbrasier2@samsung.com", "1988-01-19"),
-(NULL, "Goober", "OShea", 27331808, "goshea3@newyorker.com", "1971-05-04"),
-(NULL, "Karyn", "Sones", 24130649, "ksones4@hexun.com", "2014-03-09"),
-(NULL, "Erminie", "Giovanazzi", 46099354, "egiovanazzi5@example.com", "1992-11-24"),
-(NULL, "Pauli", "Standbrook", 41219114, "pstandbrook6@naver.com", "1977-09-17"),
-(NULL, "Andriana", "Hackinge", 37797943, "ahackinge7@nhs.uk", "1980-07-05"),
-(NULL, "Aigneis", "Kernocke", 16470072, "akernocke8@hc360.com", "1965-07-15"),
-(NULL, "Dannie", "Linscott", 17486678, "dlinscott9@fema.gov", "2004-03-10"),
-(NULL, "Dorisa", "Horche", 45454456, "dhorchea@4shared.com", "2007-09-05"),
-(NULL, "Raphael", "Tosdevin", 30575623, "rtosdevinb@huffingtonpost.com", "2012-04-12"),
-(NULL, "Lishe", "Cowl", 21671404, "lcowlc@merriam-webster.com", "2008-06-24"),
-(NULL, "Sonnie", "Shilton", 19559913, "sshiltond@google.nl", "1972-12-16"),
-(NULL, "Marji", "Semple", 28205696, "msemplee@who.int", "2016-07-13");
+(NULL, 'Cleve', 'Jeratt', 36993108, 'cjeratt0@addthis.com', '1962-11-04'),
+(NULL, 'Nels', 'Reddan', 33625613, 'nreddan1@mapy.cz', '2001-08-06'),
+(NULL, 'Dale', 'Shanley', 44966670, 'dshanley2@youku.com', '2003-07-23'),
+(NULL, 'Janaya', 'Cawthry', 29006567, 'jcawthry3@51.la', '1996-10-31'),
+(NULL, 'Tallulah', 'Fairbairn', 38790592, 'tfairbairn4@eepurl.com', '2000-11-03'),
+(NULL, 'Marianna', 'Gossington', 46533752, 'mgossington5@creativecommons.org', '2000-03-15'),
+(NULL, 'Shaun', 'Haddick', 41257677, 'shaddick6@mapy.cz', '2002-09-18'),
+(NULL, 'Dyann', 'Jarley', 24049484, 'djarley7@archive.org', '1999-07-19'),
+(NULL, 'Roxine', 'Boullen', 21392444, 'rboullen8@google.com', '1993-07-10'),
+(NULL, 'Feodora', 'Danilyak', 16279050, 'fdanilyak9@people.com.cn', '2002-10-18'),
+(NULL, 'Corney', 'Barthelme', 49682301, 'cbarthelmea@google.com.au', '1974-03-29'),
+(NULL, 'Amalie', 'Theunissen', 19063484, 'atheunissenb@loc.gov', '1985-04-02'),
+(NULL, 'Ware', 'McCurlye', 48862173, 'wmccurlyec@mapquest.com', '2002-07-12'),
+(NULL, 'Buckie', 'Argente', 41803186, 'bargented@twitter.com', '1989-07-30'),
+(NULL, 'Alfy', 'Molden', 31433942, 'amoldene@yale.edu', '1984-07-01'),
+(NULL, 'Derick', 'Presnail', 47670955, 'dpresnailf@bloomberg.com', '1960-06-20'),
+(NULL, 'Oswald', 'Sommerling', 45477640, 'osommerlingg@omniture.com', '2000-05-03'),
+(NULL, 'Deloris', 'Northover', 32328462, 'dnorthoverh@imdb.com', '1990-07-22'),
+(NULL, 'Rosco', 'Woolmington', 41677072, 'rwoolmingtoni@omniture.com', '1986-08-31'),
+(NULL, 'Rocky', 'Smee', 39029783, 'rsmeej@earthlink.net', '1989-12-25'),
+(NULL, 'Shelby', 'Stredwick', 18332675, 'sstredwickk@nydailynews.com', '1973-06-20'),
+(NULL, 'Fara', 'Fosh', 35835660, 'ffoshl@com.com', '1995-04-12'),
+(NULL, 'Shawnee', 'Pagram', 18013921, 'spagramm@economist.com', '1992-08-24'),
+(NULL, 'Nerty', 'Morot', 19308737, 'nmorotn@reference.com', '2008-09-07'),
+(NULL, 'Garrik', 'Millichap', 24219841, 'gmillichapo@linkedin.com', '2010-04-27'),
+(NULL, 'Stinky', 'Wilber', 47704018, 'swilberp@is.gd', '1989-10-13'),
+(NULL, 'Linet', 'Marin', 36183195, 'lmarinq@irs.gov', '1973-08-18'),
+(NULL, 'Bari', 'Caurah', 29282918, 'bcaurahr@toplist.cz', '1980-07-11'),
+(NULL, 'Dulcie', 'Rubenchik', 25472679, 'drubenchiks@sciencedaily.com', '1984-10-18'),
+(NULL, 'Noel', 'Wrathmall', 18843377, 'nwrathmallt@alexa.com', '1978-08-07');
 
 INSERT INTO vendedores (id_vendedor, id_persona, legajo, horario) VALUES
 (NULL, 1, 10000,"mañana"),
@@ -34,22 +49,23 @@ INSERT INTO vendedores (id_vendedor, id_persona, legajo, horario) VALUES
 (NULL, 14, 10013,"mañana"),
 (NULL, 15, 10014,"tarde");
 
+
 INSERT INTO clientes (id_cliente, id_persona, newsletter) VALUES
-(NULL, 1, DEFAULT),
-(NULL, 2, FALSE),
-(NULL, 3, FALSE),
-(NULL, 4, TRUE),
-(NULL, 5, FALSE),
-(NULL, 6, TRUE),
-(NULL, 7, FALSE),
-(NULL, 8, DEFAULT),
-(NULL, 9, TRUE),
-(NULL, 10, FALSE),
-(NULL, 11, DEFAULT),
-(NULL, 12, TRUE),
-(NULL, 13, FALSE),
-(NULL, 14, FALSE),
-(NULL, 15, DEFAULT);
+(NULL, 16, DEFAULT),
+(NULL, 17, FALSE),
+(NULL, 18, FALSE),
+(NULL, 19, TRUE),
+(NULL, 20, FALSE),
+(NULL, 21, TRUE),
+(NULL, 22, FALSE),
+(NULL, 23, DEFAULT),
+(NULL, 24, TRUE),
+(NULL, 25, FALSE),
+(NULL, 26, DEFAULT),
+(NULL, 27, TRUE),
+(NULL, 28, FALSE),
+(NULL, 29, FALSE),
+(NULL, 30, DEFAULT);
 
 INSERT INTO metodos_pago (id_pago, metodo_pago) VALUES
 (NULL, "crédito"),
