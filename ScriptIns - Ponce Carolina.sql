@@ -32,6 +32,8 @@ INSERT INTO personas (id_persona, nombre, apellido, dni, email, fecha_nacimiento
 (NULL, 'Dulcie', 'Rubenchik', 25472679, 'drubenchiks@sciencedaily.com', '1984-10-18'),
 (NULL, 'Noel', 'Wrathmall', 18843377, 'nwrathmallt@alexa.com', '1978-08-07');
 
+
+
 INSERT INTO vendedores (id_vendedor, id_persona, legajo, horario) VALUES
 (NULL, 1, 10000,"mañana"),
 (NULL, 2, 10001,"mañana"),
@@ -107,7 +109,12 @@ INSERT INTO productos (id_producto, nombre, autor, isbn, fecha_publicacion, id_t
 (NULL, "La Cenicienta", "Charles Perrault", "9789505814909", "1697-01-01", 2, 2, 848.62),
 (NULL, "IT", "Stephen King", "9789877253191", "1986-09-15", 2, 1, 21531.98),
 (NULL, "Heredera de un Secreto", "Elisa Roldán", "9789504646686", "1999-05-23", 2, 1, 15914.74),
-(NULL, "El Principito", "Antoine De Saint-Exúpery", "9789876376471", "1943-04-06", 2, 1, 10585.37);
+(NULL, "El Principito", "Antoine De Saint-Exúpery", "9789876376471", "1943-04-06", 2, 1, 10585.37),
+(NULL, "Hush Hush", "Becca Fitzpatrick", "9789877388459", "2009-10-13", 2, 1, 5399.00),
+(NULL, "Crescendo", "Becca Fitzpatrick", "9789877388657", "2010-10-19", 2, 1, 5400.00),
+(NULL, "Silence", "Becca Fitzpatrick", "9789877388794", "2011-10-04", 2, 1, 5450.00),
+(NULL, "Finale", "Becca Fitzpatrick", "9789877388800", "2012-10-23", 2, 1, 5600.00),
+(NULL,"El Príncipe y el Mendigo", "Mark Twain", "9788490744390", "1881-04-04", 2, 1,  4200.00);
 
 INSERT INTO ventas (id_ventas, id_cliente, id_vendedor, id_pago, fecha_venta) VALUES
 (NULL, 11, 6, 1, '2019-03-03 05:23:56'),
