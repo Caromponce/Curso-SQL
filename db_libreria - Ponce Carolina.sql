@@ -240,6 +240,21 @@ CREATE OR REPLACE VIEW cantidad_por_turno AS
     FROM vendedores
     GROUP BY horario  ORDER BY COUNT(horario));
     
+-- Vista que muestra la cantidad de productos vendidos por mes, en un año específico, en este caso el año 2021.
+CREATE OR REPLACE VIEW productos_vendidos_mes AS
+    (SELECT COUNT(pv.id_venta) AS ProductosVendidos, MONTH(v.fecha_venta) AS Mes, YEAR(v.fecha_venta) AS Anio
+    FROM producto_venta pv JOIN ventas v ON (pv.id_venta = v.id_ventas)
+    WHERE YEAR(v.fecha_venta) = 2021
+    GROUP BY MONTH(v.fecha_venta) ORDER BY MONTH(v.fecha_venta));
+  
+  -- Vista que muestra los productos menos vendidos. 
+CREATE OR REPLACE VIEW productos_menos_vendidos AS
+	(SELECT nombre, autor, COUNT(pv.id_producto) AS CantidadVendidos
+    FROM productos pr JOIN producto_venta pv ON (pr.id_producto = pv.id_producto) 
+    GROUP BY pv.id_producto ORDER BY COUNT(pv.id_producto) ASC LIMIT 10
+    );
+    
+    
 -- Triggers
 
 DELIMITER $$
