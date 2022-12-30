@@ -105,11 +105,11 @@ DELIMITER $$
 -- y le proporciona un descuento si supera los $20000, los $10000 o el precio sigue siemdo el mismo.
 DROP FUNCTION IF EXISTS  `bonificacion_por_compra`$$
 CREATE FUNCTION `bonificacion_por_compra`(venta INT)
-RETURNS decimal(7,2)
+RETURNS decimal(10,2)
 READS SQL DATA
 BEGIN
-	DECLARE precio DECIMAL(7,2);
-    DECLARE resultado  DECIMAL(7,2);
+	DECLARE precio DECIMAL(10,2);
+    DECLARE resultado  DECIMAL(10,2);
     SET precio = (SELECT SUM(ps.precio)
 				FROM producto_venta pv JOIN productos ps ON (pv.id_producto = ps.id_producto)
 				WHERE pv.id_venta = venta);
@@ -124,7 +124,7 @@ RETURN resultado;
 END$$
 
 
--- Función que permite conocer cuantas ventas realizó por año cada vendedor. (El vendedor 15, tiene 2 ventas en el año 2021)
+-- Función que permite conocer cuantas ventas realizó por año cada vendedor. (El vendedor 15, tiene 6 ventas en el año 2021)
 DROP FUNCTION IF EXISTS  `ventas_por_anio`$$
 CREATE FUNCTION `ventas_por_anio`(vendedor INT, anio INT)
 RETURNS varchar(128) CHARSET utf8mb4
@@ -132,9 +132,9 @@ READS SQL DATA
 BEGIN
 	DECLARE cant_ventas INT;
     DECLARE resultado VARCHAR (128);
-    SET cant_ventas = (SELECT COUNT(id_vendedor) FROM libreria.ventas WHERE id_vendedor = vendedor AND YEAR(fecha_venta) = anio); 
-    IF cant_ventas >= 2 THEN
-		SET resultado = "El vendedor recibirá una bonificación por tener mas de 2 ventas";
+    SET cant_ventas = (SELECT COUNT(id_vendedor) FROM libreria_ponce.ventas WHERE id_vendedor = vendedor AND YEAR(fecha_venta) = anio); 
+    IF cant_ventas >= 5 THEN
+		SET resultado = "El vendedor recibirá una bonificación por tener mas de 5 ventas";
 	ELSE 
 		SET resultado = "LLamado de atención al vendedor";
 	END IF;
