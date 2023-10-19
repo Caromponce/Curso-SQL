@@ -3,7 +3,7 @@
 El presente documento es el proyecto final que se basa en lo aprendido
 en el curso de SQL de Coderhouse.
 ---
-### Situación Problemática:  
+### Situación Problemática:
 Se propone crear una tienda de libros, la cual inicialmente no cuenta
 con un registro de las ventas realizadas, de información de cada vendedor de
 la tienda, de los clientes y de los productos que posee la tienda. A futuro le
