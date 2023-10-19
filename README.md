@@ -1,4 +1,4 @@
-# Bienvenido al Proyecto de una Tienda de Libros basado en SQ
+# Bienvenido al Proyecto de una Tienda de Libros basado en SQL
 
 El presente documento es el proyecto final que se basa en lo aprendido
 en el curso de SQL de Coderhouse.  
